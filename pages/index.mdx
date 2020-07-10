@@ -1,5 +1,6 @@
 import { Container } from 'theme-ui'
-import { TitleTile, InfoTiles } from '../components/cards'
+import { HeaderTile, TitleTile, InfoTiles } from '../components/cards'
+import { Profiles } from "../components/profile"
 
 <Container sx={{
     display: 'flex',
@@ -8,11 +9,18 @@ import { TitleTile, InfoTiles } from '../components/cards'
     maxWidth: '100%'
 }}>
 
-<TitleTile>
+<TitleTile 
+  id="Home"
+  sx={{
+      backgroundColor: 'cyan'
+  }}
+>
 
-- Home
-- About
-- Contact
+<HeaderTile 
+  title="Example" 
+  subdivisions={["About", "Team", "Contact"]}
+  sdcolor = "black"
+/>
 
 # LOREM IPSUM
 
@@ -20,15 +28,43 @@ import { TitleTile, InfoTiles } from '../components/cards'
 
 </TitleTile>
 
-<InfoTiles>
+<InfoTiles
+  id="About"
+>
 
-- ![Sample: Strawberry](http://qzjx.us/strawberry)
-  - # Sample Title
+## About Us
+
+- ![Sample: Strawberry](/field.jpg)
+  - ### Sample Title
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-- ![Sample: Strawberry](http://qzjx.us/strawberry)
-  - # Sample Title
+- ![Sample: Strawberry](/field.jpg)
+  - ### Sample Title
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 </InfoTiles>
+
+<Profiles
+  id="Team"
+>
+
+## Our Team
+
+- ![Sample: Strawberry](/strawberry.png)
+  - ### Sample Title
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- ![Sample: Strawberry](/strawberry.png)
+  - ### Sample Title
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- ![Sample: Strawberry](/strawberry.png)
+  - ### Sample Title
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- ![Sample: Strawberry](/strawberry.png)
+  - ### Sample Title
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- ![Sample: Strawberry](/strawberry.png)
+  - ### Sample Title
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+</Profiles>
 
 </Container>

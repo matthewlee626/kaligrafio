@@ -1,5 +1,67 @@
 /** @jsx jsx */
 import { jsx, Box } from 'theme-ui'
+import {Navbar, Nav} from 'react-bootstrap'
+
+export const HeaderTile = props => (
+  <Box
+      sx={{
+        position: 'absolute',
+        top: 0,
+        minWidth: '100%',
+        ul: {
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          listStyle: 'none',
+          right: [3, 3, 5],
+          li:{
+            mx: [1, 1, 2]
+          }
+        },
+        img: {
+          ml: 1,
+          mr: 2
+        },
+        ...props.sx
+    }}
+  >
+    <Navbar 
+      expand="lg" 
+    >
+    <Navbar.Brand href="#Home">
+      <img
+        alt=""
+        src="/strawberry.png"
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
+      />
+      {props.title}
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" 
+      style={{
+        color: props.sdcolor
+      }}
+    />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="ml-auto">
+        {props.subdivisions.map((subdivision) => (
+          <Nav.Link 
+            className="ml-auto" 
+            href={`#${subdivision}`}
+            style={{
+              color: props.sdcolor
+            }}
+          >
+            {subdivision}
+          </Nav.Link>
+        ))}
+      </Nav>
+    </Navbar.Collapse>
+    </Navbar>
+  </Box>
+)
 
 export const TitleTile = props => (
   <Box
@@ -11,21 +73,13 @@ export const TitleTile = props => (
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      textAlign: 'center',
       h1: {
-        m: [3, 4]
+        m: [3, 4],
+        maxWidth: '50%',
       },
-      ul: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        listStyle: 'none',
-        position: 'absolute',
-        top: 0,
-        right: [null, 3, 4],
-        li:{
-          mx: [1, 1, 2]
-        }
+      h3: {
+        maxWidth: '70%',
       },
       ...props.sx
     }}
@@ -37,6 +91,7 @@ export const InfoTiles = props => (
       {...props}
       sx={{
         maxWidth: '70%',
+        textAlign: 'center',
         ul: {
           listStyle: 'none',
           p: 0,
@@ -44,7 +99,8 @@ export const InfoTiles = props => (
           display: 'grid',
           gridGap: [3, 4],
         },
-        li: {
+        li: {        
+          my: [4, 4, 4],
 					display: 'flex',
           flexDirection: ['column', 'column', 'row'],
           alignItems: ['center', 'center', 'flex-start'],
@@ -59,19 +115,23 @@ export const InfoTiles = props => (
           
 					ul: {
 						li: {
+              my: [0, 0, 0],
 							display: 'flex',
 							flexDirection: 'column',
               justifyContent: 'start',
+              textAlign: 'left'
             },
             minHeight: '100%',
             mx: [1, 2, 3],
             my: 0
 					}
         },
-        h1: {
-          fontSize: 4,
+        h2: {
+          margin: 4,
+        },
+        h3: {
           mb: 2,
-          mt: 0,
+          mt: [3, 0, 0],
           lineHeight: 'heading',
           a: {
             color: 'inherit',
@@ -80,10 +140,10 @@ export const InfoTiles = props => (
         },
         img: {
           display: 'block',
-          minWidth: '40%',
-          width: '40%',
-          maxWidth: '40%',
-					maxHeight: '20rem',
+          minWidth: '20em',
+          width: '20rem',
+          maxWidth: ['6rem', '20rem', '20rem'],
+          maxHeight: '10rem',
 					objectFit: 'cover',
           objectPosition: 'center'
         },

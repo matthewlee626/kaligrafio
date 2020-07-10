@@ -1,6 +1,7 @@
 const colors = {
   black: '#000000',
   offblack: '#101010',
+  cream: '#fffdd0',
   offwhite: '#e0e0e0',
   white: '#ffffff',
 
@@ -77,14 +78,14 @@ const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 5
+      fontSize: 6
     },
     h2: {
       color: 'text',
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 4
+      fontSize: 5
     },
     h3: {
       color: 'text',
