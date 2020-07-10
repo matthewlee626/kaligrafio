@@ -1,9 +1,42 @@
-import { Box } from 'theme-ui'
+/** @jsx jsx */
+import { jsx, Box } from 'theme-ui'
 
-export const Tiles = props => (
+export const TitleTile = props => (
+  <Box
+    {...props}
+    sx={{
+      minHeight: '100vh',
+      minWidth: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      h1: {
+        m: [3, 4]
+      },
+      ul: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        listStyle: 'none',
+        position: 'absolute',
+        top: 0,
+        right: [null, 3, 4],
+        li:{
+          mx: [1, 1, 2]
+        }
+      },
+      ...props.sx
+    }}
+  />
+)
+
+export const InfoTiles = props => (
     <Box
       {...props}
       sx={{
+        maxWidth: '70%',
         ul: {
           listStyle: 'none',
           p: 0,
@@ -17,10 +50,13 @@ export const Tiles = props => (
           alignItems: ['center', 'center', 'flex-start'],
           justifyContent: 'stretch',
           maxWidth: '100%',
+          fontSize: 2,
+
           a: {
             color: 'inherit',
             textDecoration: 'none'
-					},
+          },
+          
 					ul: {
 						li: {
 							display: 'flex',
@@ -33,7 +69,7 @@ export const Tiles = props => (
 					}
         },
         h1: {
-          fontSize: [2, 3],
+          fontSize: 4,
           mb: 2,
           mt: 0,
           lineHeight: 'heading',
@@ -42,7 +78,6 @@ export const Tiles = props => (
             textDecoration: 'none'
           }
         },
-
         img: {
           display: 'block',
           minWidth: '40%',
