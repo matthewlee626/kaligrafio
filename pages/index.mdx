@@ -1,6 +1,8 @@
 import { Container } from 'theme-ui'
-import { HeaderTile, TitleTile, InfoTiles } from '../components/cards'
+import { HeaderTile, TitleTile, InfoTiles, ContactTile } from '../components/cards'
 import { Profiles } from "../components/profile"
+import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
 
 <Container sx={{
     display: 'flex',
@@ -10,7 +12,8 @@ import { Profiles } from "../components/profile"
 }}>
 
 <TitleTile 
-  id="Home"
+  id="home"
+  name="home"
   sx={{
       backgroundColor: 'cyan'
   }}
@@ -18,7 +21,7 @@ import { Profiles } from "../components/profile"
 
 <HeaderTile 
   title="Example" 
-  subdivisions={["About", "Team", "Contact"]}
+  subdivisions={["about", "team", "contact"]}
   sdcolor = "black"
 />
 
@@ -29,7 +32,8 @@ import { Profiles } from "../components/profile"
 </TitleTile>
 
 <InfoTiles
-  id="About"
+  id="about"
+  name="about"
 >
 
 ## About Us
@@ -44,7 +48,8 @@ import { Profiles } from "../components/profile"
 </InfoTiles>
 
 <Profiles
-  id="Team"
+  id="team"
+  name="team"
 >
 
 ## Our Team
@@ -66,5 +71,20 @@ import { Profiles } from "../components/profile"
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
 </Profiles>
+
+<ContactTile
+  id="contact"
+  name="contact"
+>
+
+## Contact Us
+
+Want to talk? Reach out at the following:
+
+- <a><FaInstagram/></a>
+- <a><FaFacebook/></a>
+- <a><FiMail/></a>
+
+</ContactTile>
 
 </Container>

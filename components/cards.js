@@ -50,11 +50,12 @@ export const HeaderTile = props => (
           <Nav.Link 
             className="ml-auto" 
             href={`#${subdivision}`}
+            id={subdivision}
             style={{
               color: props.sdcolor
             }}
           >
-            {subdivision}
+            {subdivision.charAt(0).toUpperCase() + subdivision.slice(1)}
           </Nav.Link>
         ))}
       </Nav>
@@ -87,67 +88,98 @@ export const TitleTile = props => (
 )
 
 export const InfoTiles = props => (
-    <Box
-      {...props}
-      sx={{
-        maxWidth: '70%',
-        textAlign: 'center',
-        ul: {
-          listStyle: 'none',
-          p: 0,
-          m: [3, 4],
-          display: 'grid',
-          gridGap: [3, 4],
-        },
-        li: {        
-          my: [4, 4, 4],
-					display: 'flex',
-          flexDirection: ['column', 'column', 'row'],
-          alignItems: ['center', 'center', 'flex-start'],
-          justifyContent: 'stretch',
-          maxWidth: '100%',
-          fontSize: 2,
+  <Box
+    {...props}
+    sx={{
+      maxWidth: '70%',
+      textAlign: 'center',
+      ul: {
+        listStyle: 'none',
+        p: 0,
+        m: [3, 4],
+        display: 'grid',
+        gridGap: [3, 4],
+      },
+      li: {        
+        my: [4, 4, 4],
+        display: 'flex',
+        flexDirection: ['column', 'column', 'row'],
+        alignItems: ['center', 'center', 'flex-start'],
+        justifyContent: 'stretch',
+        maxWidth: '100%',
+        fontSize: 2,
 
-          a: {
-            color: 'inherit',
-            textDecoration: 'none'
+        a: {
+          color: 'inherit',
+          textDecoration: 'none'
+        },
+        
+        ul: {
+          li: {
+            my: [0, 0, 0],
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'start',
+            textAlign: 'left'
           },
-          
-					ul: {
-						li: {
-              my: [0, 0, 0],
-							display: 'flex',
-							flexDirection: 'column',
-              justifyContent: 'start',
-              textAlign: 'left'
-            },
-            minHeight: '100%',
-            mx: [1, 2, 3],
-            my: 0
-					}
-        },
-        h2: {
-          margin: 4,
-        },
-        h3: {
-          mb: 2,
-          mt: [3, 0, 0],
-          lineHeight: 'heading',
-          a: {
-            color: 'inherit',
-            textDecoration: 'none'
+          minHeight: '100%',
+          mx: [1, 2, 3],
+          my: 0
+        }
+      },
+      h2: {
+        margin: 4,
+      },
+      h3: {
+        mb: 2,
+        mt: [3, 0, 0],
+        lineHeight: 'heading',
+        a: {
+          color: 'inherit',
+          textDecoration: 'none'
+        }
+      },
+      img: {
+        display: 'block',
+        minWidth: '20em',
+        width: '20rem',
+        maxWidth: ['6rem', '20rem', '20rem'],
+        maxHeight: '10rem',
+        objectFit: 'cover',
+        objectPosition: 'center'
+      },
+      ...props.sx
+    }}
+  />
+)
+
+export const ContactTile = props => (
+  <Box
+    {...props}
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
+      h2: {
+        margin: 4,
+      },
+      ul: {
+        padding: 0,
+        listStyle: 'none',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        my: 4,
+        a: {
+          m: [3, 3, 3],
+          svg: {
+            width: 4,
+            height: 4,
           }
-        },
-        img: {
-          display: 'block',
-          minWidth: '20em',
-          width: '20rem',
-          maxWidth: ['6rem', '20rem', '20rem'],
-          maxHeight: '10rem',
-					objectFit: 'cover',
-          objectPosition: 'center'
-        },
-        ...props.sx
-      }}
-    />
-  )
+        }
+      },
+      ...props.sx
+    }}
+  />
+)
