@@ -29,7 +29,7 @@ export const HeaderTile = props => (
     <Navbar 
       expand="lg" 
     >
-    <Navbar.Brand href="#Home">
+    <Navbar.Brand href="">
       <img
         alt=""
         src="/strawberry.png"
@@ -50,7 +50,7 @@ export const HeaderTile = props => (
           <Nav.Link 
             className="ml-auto" 
             href={`#${subdivision}`}
-            id={subdivision}
+            key={subdivision}
             style={{
               color: props.sdcolor
             }}
@@ -68,7 +68,7 @@ export const TitleTile = props => (
   <Box
     {...props}
     sx={{
-      minHeight: '100vh',
+      minHeight: '105vh',
       minWidth: '100%',
       display: 'flex',
       flexDirection: 'column',
