@@ -31,7 +31,7 @@ export default function index() {
 					fontFamily={currentFont}
 					mainContent={mainContent}
 					html={currentContent}
-					changeText={}
+					changeText={setContent}
 					sx={{   
 						overflowWrap: 'break-word',
 					}}

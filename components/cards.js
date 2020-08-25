@@ -24,9 +24,9 @@ export const VertText = props => (
   > 
     <ContentEditable
       innerRef={props.mainContent}
-      html={props.html} // innerHTML of the editable div
-      disabled={false}       // use true to disable editing
-      onChange={console.log(props.html)} // handle innerHTML change
+      html={props.html} 
+      disabled={false}      
+      onChange={props.setContent} // TODO
     />
   </Box>
 )
