@@ -15,7 +15,7 @@ export default function Post({data}) {
 export async function getServerSideProps({params}) {
   const res = await fetch(`https://bijibenback.matthewlee626.repl.co/messages/${params.postID}`)
   const data = await res.json()
-  // console.log(data)
+    console.log(data)
   // Pass data to the page via props
   return { props: { data } }
 }

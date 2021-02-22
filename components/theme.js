@@ -5,6 +5,7 @@ const colors = {
   offwhite: '#e0e0e0',
   white: '#ffffff',
   brown: "#ba8c45",
+  darkbrown: "#826130",
 
 
   red: '#ec3750',
@@ -40,7 +41,7 @@ const theme = {
     512
   ],
   fonts: {
-    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'ZCool XiaoWei, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace'
   },
@@ -69,13 +70,13 @@ const theme = {
     text: colors.black,
     background: colors.cream,
     primary: colors.brown,
-    secondary: colors.brown,
+    secondary: colors.darkbrown,
     muted: colors.offwhite,
     dark: {
       text: colors.white,
-      background: colors.black,
-      primary: colors.brown,
-      secondary: colors.cream,
+      background: colors.darkbrown,
+      primary: colors.cream,
+      secondary: colors.brown,
       muted: colors.offblack,
     }
   },
@@ -131,10 +132,14 @@ const theme = {
       color: 'text',
       fontFamily: 'body',
       fontWeight: 'body',
-      lineHeight: 'body'
+      lineHeight: 'body',
+      p: 0,
     },
     a: {
-      color: 'primary'
+      color: 'primary',
+      ':hover': {
+        color: 'secondary',
+      }
     },
     pre: {
       fontFamily: 'monospace',
