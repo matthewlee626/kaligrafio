@@ -1,9 +1,10 @@
 const colors = {
   black: '#000000',
   offblack: '#101010',
-  cream: '#fffdd0',
+  cream: '#EBD78D',
   offwhite: '#e0e0e0',
   white: '#ffffff',
+  brown: "#ba8c45",
 
 
   red: '#ec3750',
@@ -39,9 +40,9 @@ const theme = {
     512
   ],
   fonts: {
-    body: 'Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'inherit',
-    monospace: 'Ubuntu Monospace, Menlo, monospace'
+    monospace: 'Menlo, monospace'
   },
   fontSizes: [
     12,
@@ -66,15 +67,15 @@ const theme = {
   colors: {
     ...colors,
     text: colors.black,
-    background: colors.white,
-    primary: colors.strawberry,
-    secondary: colors.blue,
+    background: colors.cream,
+    primary: colors.brown,
+    secondary: colors.brown,
     muted: colors.offwhite,
     dark: {
       text: colors.white,
       background: colors.black,
-      primary: colors.strawberry,
-      secondary: colors.blue,
+      primary: colors.brown,
+      secondary: colors.cream,
       muted: colors.offblack,
     }
   },

@@ -23,10 +23,10 @@ export const VertText = props => (
   }}
   > 
     <ContentEditable
-      innerRef={props.mainContent}
+      // innerRef={props.mainContent}
       html={props.html} 
       disabled={false}      
-      onChange={props.setContent} // TODO
+      onChange={props.changeText} // TODO
     />
   </Box>
 )
