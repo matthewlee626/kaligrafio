@@ -41,10 +41,6 @@ export function Mainframe({font, content, postID}) {
 
 	return (
 		<>
-			<Head>
-				<title>笔记本</title>
-				<link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet"></link>
-			</Head>
 			<Container sx={{   
 					display: 'grid',
 					gridTemplate: 'auto 1fr auto/ auto 1fr auto',
@@ -120,7 +116,7 @@ export function Mainframe({font, content, postID}) {
 					justifyContent: 'flex-end',
 					alignItems: 'center',
 				}}>
-					<Link href="https://github.com/matthewlee626/kaligrafio"><FaGithub/></Link>
+					<Link href="https://github.com/matthewlee626/kaligrafio"><FaGithub size={'2em'}/></Link>
 				</Box>
 			</Container>
 		</>
