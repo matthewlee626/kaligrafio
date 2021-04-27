@@ -6,8 +6,8 @@ Frontend built with Next.js. Backend with Express, hosted on Repl.it. Database o
 
 ## TODO
 
-- [ ] Add KR
-- [ ] Add JP
+- [x] Add KR
+- [x] Add JP
 - [X] Add publishing
 - [X] Add updating
-- [ ] Social Features (Sharing)
+- [ ] NEW: Social Features (Sharing)

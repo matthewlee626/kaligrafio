@@ -7,6 +7,7 @@ export default function Post({data}) {
       font = {data.font}
       content = {data.content}
       postID = {data.postID}
+      renderDelete = {true}
     ></Mainframe>
   )
 }
